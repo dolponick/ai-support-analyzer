@@ -93,7 +93,7 @@ All 42 listed tests passed. The local application is READY FOR GIT/DEPLOY prepar
 - Deployment date: `2026-09-26`.
 - Vercel project: `ai-support-analyzer`.
 - Production URL: [https://ai-support-analyzer.vercel.app](https://ai-support-analyzer.vercel.app).
-- Deployed source commit: `778e91439ad2d5f8346660818f371844334750ed`.
+- Deployed source commit: `1a99931f69804902ab476e586be851caf4a048c9` (`docs: add production deployment details`).
 - Vercel build: Ready; Next.js production deployment completed successfully.
 - Production environment variable names configured: `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `GROQ_API_KEY`, `GROQ_MODEL` (values intentionally omitted).
 - Fresh unauthenticated browser access: PASS; the application rendered with the request form and persisted request cards.
@@ -112,4 +112,4 @@ All 42 listed tests passed. The local application is READY FOR GIT/DEPLOY prepar
 ### Stage 8 remaining limitations
 
 - The production QA was executed in a fresh unauthenticated Opera tab; a dedicated private/incognito window was not required to validate public access and was not used.
-- The deployment was created from the accepted GitHub `main` commit. Documentation changes made after this QA require a follow-up Vercel deployment verification.
+- The final documentation commit was redeployed from GitHub `main` and verified as Ready in Vercel; no additional deployment verification is pending.
