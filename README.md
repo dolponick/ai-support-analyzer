@@ -121,7 +121,7 @@ pnpm typecheck
 pnpm build
 ```
 
-The final local QA pass completed with 42/42 tests passing. See [`QA_REPORT.md`](QA_REPORT.md) for the detailed test matrix, database verification, responsive checks, failure-path checks, and security audit.
+The final local QA pass completed with 42/42 tests passing. The checks above cover the repeatable lint, typecheck, and production-build verification for this repository.
 
 ## Deployment
 
@@ -136,7 +136,7 @@ The production deployment is connected to the GitHub `main` branch. Vercel uses 
 - `GROQ_API_KEY`
 - `GROQ_MODEL`
 
-The Supabase service-role key and Groq API key are secret and must never be exposed through `NEXT_PUBLIC_` variables or client code. The public URL was verified after deployment; see [`QA_REPORT.md`](QA_REPORT.md) for the production QA record.
+The Supabase service-role key and Groq API key are secret and must never be exposed through `NEXT_PUBLIC_` variables or client code. The public URL was verified after deployment.
 
 ## Known Limitations
 
