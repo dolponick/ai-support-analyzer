@@ -87,3 +87,29 @@ Every test below has an ID, expected result, actual result, and a PASS/FAIL outc
 ## Final local status
 
 All 42 listed tests passed. The local application is READY FOR GIT/DEPLOY preparation after explicit user approval to begin the next stage. No GitHub repository was created and no deployment was performed.
+
+## Production / Vercel QA
+
+- Deployment date: `2026-09-26`.
+- Vercel project: `ai-support-analyzer`.
+- Production URL: [https://ai-support-analyzer.vercel.app](https://ai-support-analyzer.vercel.app).
+- Deployed source commit: `778e91439ad2d5f8346660818f371844334750ed`.
+- Vercel build: Ready; Next.js production deployment completed successfully.
+- Production environment variable names configured: `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `GROQ_API_KEY`, `GROQ_MODEL` (values intentionally omitted).
+- Fresh unauthenticated browser access: PASS; the application rendered with the request form and persisted request cards.
+- `GET /api/requests`: HTTP 200, response shape `{ "requests": [...] }`, 19 persisted rows, both production QA rows present, newest-first ordering confirmed.
+- Production low-priority case `Production QA`: created through the public UI, analyzed successfully as `низький` / `інше`, and remained present after reload.
+- Production payment case `Production Payment QA`: created through the public UI, analyzed successfully as `високий` / `оплата`; the draft did not claim that a refund had already been completed.
+- Re-analysis: PASS; the low-priority production card entered `Аналізуємо…`, completed, saved the result, and remained analyzed after reload.
+- Validation/failure paths: PASS; empty name, empty message, message over 4000 characters, and invalid JSON returned HTTP 400 with the expected error codes; invalid analyze UUID returned HTTP 400 and a valid missing UUID returned HTTP 404.
+- Persistence: PASS; both production records and their analysis results survived reload and remained in Supabase.
+- Browser console: PASS; 0 errors and 0 warnings in the fresh production tab.
+- Client network/security surface: PASS; no direct Groq/Supabase resource URL, secret name, API key prefix, service-role key, or JWT-like credential appeared in the production document/client surface.
+- Responsive checks: PASS at 390x844, 768x1024, and 1440x900; no horizontal overflow was observed.
+- README now links to the live production URL.
+- Final production status: `READY FOR SUBMISSION`.
+
+### Stage 8 remaining limitations
+
+- The production QA was executed in a fresh unauthenticated Opera tab; a dedicated private/incognito window was not required to validate public access and was not used.
+- The deployment was created from the accepted GitHub `main` commit. Documentation changes made after this QA require a follow-up Vercel deployment verification.

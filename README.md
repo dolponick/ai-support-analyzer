@@ -27,7 +27,7 @@ AI Support Analyzer is a small internal support tool that stores customer reques
 - `openai/gpt-oss-20b`
 - Zod
 - pnpm
-- Vercel deployment target
+- Vercel production deployment
 
 ## Architecture
 
@@ -125,18 +125,19 @@ The final local QA pass completed with 42/42 tests passing. See [`QA_REPORT.md`]
 
 ## Deployment
 
-To deploy later, import the GitHub repository into Vercel, select the Next.js project, and add these server environment variables in the Vercel project settings:
+Live demo: [https://ai-support-analyzer.vercel.app](https://ai-support-analyzer.vercel.app)
+
+The production deployment is connected to the GitHub `main` branch. Vercel uses these server environment variables:
 
 - `SUPABASE_URL`
 - `SUPABASE_SERVICE_ROLE_KEY`
 - `GROQ_API_KEY`
 - `GROQ_MODEL`
 
-Deploy only after verifying the production environment variables and running the public URL QA flow. This project has not been deployed yet.
+The Supabase service-role key and Groq API key are secret and must never be exposed through `NEXT_PUBLIC_` variables or client code. The public URL was verified after deployment; see [`QA_REPORT.md`](QA_REPORT.md) for the production QA record.
 
 ## Known Limitations
 
 - There is no authentication because it was outside the test-task scope.
 - LLM text generation is probabilistic.
-- Production public QA has not yet happened.
 - This is a small test/demo application, not a full CRM.
