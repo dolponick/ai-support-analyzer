@@ -127,6 +127,8 @@ The final local QA pass completed with 42/42 tests passing. See [`QA_REPORT.md`]
 
 Live demo: [https://ai-support-analyzer.vercel.app](https://ai-support-analyzer.vercel.app)
 
+Source: [https://github.com/dolponick/ai-support-analyzer](https://github.com/dolponick/ai-support-analyzer)
+
 The production deployment is connected to the GitHub `main` branch. Vercel uses these server environment variables:
 
 - `SUPABASE_URL`

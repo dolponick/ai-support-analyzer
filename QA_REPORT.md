@@ -113,3 +113,11 @@ All 42 listed tests passed. The local application is READY FOR GIT/DEPLOY prepar
 
 - The production QA was executed in a fresh unauthenticated Opera tab; a dedicated private/incognito window was not required to validate public access and was not used.
 - The final documentation commit was redeployed from GitHub `main` and verified as Ready in Vercel; no additional deployment verification is pending.
+
+## Stage 9 Submission Data
+
+- Final Supabase row count: `4`.
+- Retained demo records: `Олена` (`низький` / `інше`), `Андрій` (`середній` / `доставка`), `Марія` (`високий` / `оплата`), and `Сергій` (`середній` / `скарга`).
+- All four retained records have persisted AI analysis, concise summaries, and readable draft replies.
+- Removed only QA/test duplicates, prompt-injection and production QA records, API-only/technical records, and one additional non-demo record; no retained demo record was deleted.
+- Fresh public production reload confirmed exactly these four demo cards, with no QA/test naming and no duplicate cards.
