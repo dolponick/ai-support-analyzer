@@ -86,7 +86,7 @@ Every test below has an ID, expected result, actual result, and a PASS/FAIL outc
 
 ## Final local status
 
-All 42 listed tests passed. The local application is READY FOR GIT/DEPLOY preparation after explicit user approval to begin the next stage. No GitHub repository was created and no deployment was performed.
+Historical Stage 6 status: all 42 listed tests passed. The local application was READY FOR GIT/DEPLOY preparation after explicit user approval to begin the next stage; GitHub and deployment were intentionally deferred at that point.
 
 ## Production / Vercel QA
 
